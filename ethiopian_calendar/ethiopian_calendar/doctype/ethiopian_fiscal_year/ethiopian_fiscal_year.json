@@ -1,0 +1,16 @@
+{
+ "doctype": "DocType", "name": "Ethiopian Fiscal Year", "module": "Ethiopian Calendar", "autoname": "format:EFY-{ethiopian_year}", "naming_rule": "Expression", "istable": 0,
+ "field_order": ["company", "ethiopian_year", "ethiopian_start_date", "ethiopian_end_date", "section_gregorian", "gregorian_start_date", "gregorian_end_date", "frappe_fiscal_year"],
+ "fields": [
+  {"fieldname":"company","fieldtype":"Link","label":"Company","options":"Company","reqd":1},
+  {"fieldname":"ethiopian_year","fieldtype":"Int","label":"Ethiopian Year","reqd":1},
+  {"fieldname":"ethiopian_start_date","fieldtype":"Data","label":"Ethiopian Start Date","read_only":1},
+  {"fieldname":"ethiopian_end_date","fieldtype":"Data","label":"Ethiopian End Date","read_only":1},
+  {"fieldname":"section_gregorian","fieldtype":"Section Break","label":"Gregorian Dates Used by Frappe"},
+  {"fieldname":"gregorian_start_date","fieldtype":"Date","label":"Gregorian Start Date","reqd":1},
+  {"fieldname":"gregorian_end_date","fieldtype":"Date","label":"Gregorian End Date","reqd":1},
+  {"fieldname":"frappe_fiscal_year","fieldtype":"Link","label":"Frappe Fiscal Year","options":"Fiscal Year"}
+ ],
+ "permissions": [{"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"submit":1,"cancel":1,"amend":1},{"role":"Accounts Manager","read":1,"write":1,"create":1}],
+ "track_changes": 1
+}

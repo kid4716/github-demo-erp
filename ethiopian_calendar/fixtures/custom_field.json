@@ -1,0 +1,20 @@
+[
+ {
+  "doctype": "Custom Field", "dt": "Payroll Entry", "fieldname": "ethiopian_pay_period", "fieldtype": "Link", "label": "Ethiopian Pay Period", "options": "Ethiopian Pay Period", "insert_after": "end_date", "allow_on_submit": 0, "in_list_view": 1
+ },
+ {
+  "doctype": "Custom Field", "dt": "Payroll Entry", "fieldname": "ethiopian_period_label", "fieldtype": "Data", "label": "Ethiopian Period", "insert_after": "ethiopian_pay_period", "read_only": 1, "allow_on_submit": 0, "in_list_view": 1
+ },
+ {
+  "doctype": "Custom Field", "dt": "Payroll Entry", "fieldname": "ethiopian_salary_denominator", "fieldtype": "Int", "label": "Ethiopian Salary Denominator", "insert_after": "ethiopian_period_label", "read_only": 1, "allow_on_submit": 0
+ },
+ {
+  "doctype": "Custom Field", "dt": "Salary Slip", "fieldname": "ethiopian_pay_period", "fieldtype": "Link", "label": "Ethiopian Pay Period", "options": "Ethiopian Pay Period", "insert_after": "end_date", "read_only": 1, "allow_on_submit": 0
+ },
+ {
+  "doctype": "Custom Field", "dt": "Salary Slip", "fieldname": "ethiopian_period_label", "fieldtype": "Data", "label": "Ethiopian Period", "insert_after": "ethiopian_pay_period", "read_only": 1, "allow_on_submit": 0
+ },
+ {
+  "doctype": "Custom Field", "dt": "Salary Slip", "fieldname": "ethiopian_salary_denominator", "fieldtype": "Int", "label": "Ethiopian Salary Denominator", "insert_after": "ethiopian_period_label", "read_only": 1, "allow_on_submit": 0
+ }
+]

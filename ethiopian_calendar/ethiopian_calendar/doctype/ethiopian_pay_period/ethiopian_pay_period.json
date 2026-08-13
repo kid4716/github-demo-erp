@@ -1,0 +1,22 @@
+{
+ "doctype": "DocType", "name": "Ethiopian Pay Period", "module": "Ethiopian Calendar", "autoname": "format:EPP-{company_abbr}-{ethiopian_year}-{ethiopian_month}", "naming_rule": "Expression", "istable": 0,
+ "field_order": ["company", "company_abbr", "ethiopian_fiscal_year", "ethiopian_year", "ethiopian_month", "ethiopian_period_label", "ethiopian_start_date", "ethiopian_end_date", "section_gregorian", "gregorian_start_date", "gregorian_end_date", "section_payroll", "is_payable", "paid_days"],
+ "fields": [
+  {"fieldname":"company","fieldtype":"Link","label":"Company","options":"Company","reqd":1},
+  {"fieldname":"company_abbr","fieldtype":"Data","label":"Company Abbreviation","fetch_from":"company.abbr","read_only":1},
+  {"fieldname":"ethiopian_fiscal_year","fieldtype":"Link","label":"Ethiopian Fiscal Year","options":"Ethiopian Fiscal Year","reqd":1},
+  {"fieldname":"ethiopian_year","fieldtype":"Int","label":"Ethiopian Year","reqd":1},
+  {"fieldname":"ethiopian_month","fieldtype":"Int","label":"Ethiopian Month","reqd":1,"description":"1–12 are 30-day months; 13 is Pagume."},
+  {"fieldname":"ethiopian_period_label","fieldtype":"Data","label":"Ethiopian Period","read_only":1},
+  {"fieldname":"ethiopian_start_date","fieldtype":"Data","label":"Ethiopian Start Date","read_only":1},
+  {"fieldname":"ethiopian_end_date","fieldtype":"Data","label":"Ethiopian End Date","read_only":1},
+  {"fieldname":"section_gregorian","fieldtype":"Section Break","label":"Gregorian Dates Used by Frappe"},
+  {"fieldname":"gregorian_start_date","fieldtype":"Date","label":"Gregorian Start Date","reqd":1},
+  {"fieldname":"gregorian_end_date","fieldtype":"Date","label":"Gregorian End Date","reqd":1},
+  {"fieldname":"section_payroll","fieldtype":"Section Break","label":"Payroll Rule"},
+  {"fieldname":"is_payable","fieldtype":"Check","label":"Is Payable","read_only":1},
+  {"fieldname":"paid_days","fieldtype":"Int","label":"Paid Days","read_only":1}
+ ],
+ "permissions": [{"role":"System Manager","read":1,"write":1,"create":1,"delete":1,"submit":1,"cancel":1,"amend":1},{"role":"HR Manager","read":1,"write":1,"create":1},{"role":"Accounts Manager","read":1,"write":1,"create":1}],
+ "track_changes": 1
+}
