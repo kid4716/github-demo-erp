@@ -1,0 +1,178 @@
+.ethiopian-date-picker {
+    position: absolute;
+    z-index: 1050;
+
+    width: 320px;
+
+    background: #ffffff;
+
+    border: 1px solid #d1d8dd;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.15);
+
+    padding: 12px;
+
+    display: none;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+.ethiopian-date-picker.ec-visible {
+    display: block;
+}
+
+.ec-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.ec-title {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ec-month {
+    flex: 1;
+
+    height: 34px;
+
+    border: 1px solid #d1d8dd;
+
+    border-radius: 5px;
+
+    padding: 0 6px;
+
+    background: #fff;
+}
+
+.ec-year {
+    width: 70px;
+
+    height: 34px;
+
+    border: 1px solid #d1d8dd;
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.ec-nav {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #d1d8dd;
+
+    border-radius: 5px;
+
+    background: #fff;
+
+    cursor: pointer;
+}
+
+.ec-nav:hover {
+    background: #f5f7f9;
+}
+
+.ec-weekdays,
+.ec-days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 3px;
+}
+
+.ec-weekday {
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #6b7280;
+
+    padding: 6px 0;
+}
+
+.ec-day {
+    height: 34px;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.ec-day:hover {
+    background: #f0f4f8;
+}
+
+.ec-empty {
+    cursor: default;
+}
+
+.ec-selected {
+    background: #2490ef !important;
+    color: white;
+}
+
+.ec-today-date {
+    border: 1px solid #2490ef;
+}
+
+.ec-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.ec-footer button {
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+}
+
+.ec-footer button:hover {
+    background: #f0f4f8;
+}
+/*
+ * Hide Frappe's native Gregorian Air Datepicker for
+ * fields using the Ethiopian calendar.
+ *
+ * We do not destroy the native datepicker because
+ * Frappe's ControlDate still expects the object to exist.
+ */
+.ec-native-datepicker-hidden {
+    display: none !important;
+}

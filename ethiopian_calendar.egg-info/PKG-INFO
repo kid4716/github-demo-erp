@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: ethiopian_calendar
+Version: 0.0.1
+Summary: Ethiopian calendar periods and payroll controls for Frappe
+Author: Your Company
+Author-email: it@example.com
+Requires-Python: >=3.10
+Dynamic: author
+Dynamic: author-email

@@ -16,6 +16,7 @@ class EthiopianFiscalYear(Document):
             frappe.throw(f"Gregorian end must be {expected_end.isoformat()} for this Ethiopian fiscal year.")
         self.ethiopian_start_date = f"01/11/{self.ethiopian_year:04d}"
         self.ethiopian_end_date = f"30/10/{self.ethiopian_year + 1:04d}"
+        self.ethiopian_year_label = f"{self.ethiopian_year:04d}/{self.ethiopian_year + 1:04d} E.C."
 
     def _validate_ethiopian_year(self):
         if not self.ethiopian_year or self.ethiopian_year < 1:

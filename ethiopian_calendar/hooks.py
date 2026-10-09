@@ -7,6 +7,15 @@ app_license = "MIT"
 
 fixtures = ["Custom Field"]
 
+app_include_js = [
+    "/assets/ethiopian_calendar/js/ethiopian_calendar.js",
+    "/assets/ethiopian_calendar/js/ethiopian_date_picker.js",
+]
+
+app_include_css = [
+    "/assets/ethiopian_calendar/css/ethiopian_date_picker.css",
+]
+
 doc_events = {
     "Payroll Entry": {
         "validate": "ethiopian_calendar.integrations.payroll.apply_ethiopian_pay_period",
